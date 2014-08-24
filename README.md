@@ -7,13 +7,13 @@ This extension allows viewmodels to be injected into the DataContext of a View (
 
 # Usage
 ------------------------------
-1. Create a View (Usercontrol/Window/...)  
+- Create a View (Usercontrol/Window/...)  
 ```csharp
 <Window x:Class="MainWindow">
 	...
 </Window>
 ```
-2. Create a ViewModel (A class that will be added to the DataContext)
+- Create a ViewModel (A class that will be added to the DataContext)
 ```csharp
 namespace ViewModels
 {
@@ -23,7 +23,7 @@ namespace ViewModels
 	}
 }
 ```
-3. Bind the ViewModel to the View
+- Bind the ViewModel to the View
 ```csharp
 <Window x:Class="MainWindow"
         xmlns:resolver="clr-namespace:InjectionMap;assembly=personalplaner.common"
