@@ -5,7 +5,7 @@
 InjectionMap is a small extension to InjectionMap for WPF Applications. 
 This extension allows viewmodels to be injected into the DataContext of a View (FrameworkElement).
 
-# Examples
+# Usage
 ------------------------------
 1. Create a View (Usercontrol/Window/...)  
 ```csharp
@@ -26,8 +26,7 @@ namespace ViewModels
 3. Bind the ViewModel to the View
 ```csharp
 <Window x:Class="MainWindow"
-        xmlns:resolver="clr-namespace:InjectionMap;
-						assembly=personalplaner.common"
+        xmlns:resolver="clr-namespace:InjectionMap;assembly=personalplaner.common"
         xmlns:vm="clr-namespace:ViewModels"
         resolver:DataContextResolver.Resolve="{x:Type vm:ViewModel}">
 ...
