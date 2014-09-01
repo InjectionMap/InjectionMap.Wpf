@@ -2,7 +2,7 @@
 
 # InjectionMap.Wpf
 ------------------------------
-InjectionMap is a small extension to InjectionMap for WPF Applications. 
+InjectionMap.Wpf is a small extension to InjectionMap for WPF Applications. 
 This extension allows viewmodels to be injected into the DataContext of a View (FrameworkElement).
 
 # Usage
