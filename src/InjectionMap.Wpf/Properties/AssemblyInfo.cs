@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Windows.Markup;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
@@ -8,9 +9,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("InjectionMap.Wpf")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("WickedFlame")]
 [assembly: AssemblyProduct("InjectionMap.Wpf")]
-[assembly: AssemblyCopyright("Copyright ©  2014")]
+[assembly: AssemblyCopyright("Copyright © WickedFlame 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -22,6 +23,9 @@ using System.Runtime.InteropServices;
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("b37e72b5-ec5e-4a64-b928-9e1b979ddbba")]
 
+[assembly: XmlnsDefinition("http://schemas.wickedflame.ch/2013/xaml/presentation", "InjectionMap")]
+[assembly: XmlnsDefinition("http://schemas.wickedflame.ch/2013/xaml/presentation", "InjectionMap.Wpf")]
+
 // Version information for an assembly consists of the following four values:
 //
 //      Major Version
@@ -32,5 +36,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.1.1.0")]
-[assembly: AssemblyFileVersion("0.1.1.0")]
+[assembly: AssemblyVersion("0.1.3.3")]
+[assembly: AssemblyFileVersion("0.1.3.3")]

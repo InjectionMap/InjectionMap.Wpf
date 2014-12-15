@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+    <metadata>
+        <id>InjectionMap.Wpf</id>
+        <version>0.1.3</version>
+        <title>InjectionMap.Wpf</title>
+        <authors>Christian Walpen</authors>
+        <owners>Christian Walpen</owners>
+        <licenseUrl>https://github.com/InjectionMap/InjectionMap.Wpf/raw/master/License.txt</licenseUrl>
+        <projectUrl>http://wicked-flame.blogspot.ch/p/injectionmap.html</projectUrl>
+        <iconUrl>https://github.com/InjectionMap/InjectionMap/raw/master/assets/InjectionMap.ico</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>InjectionMap is a small extension to InjectionMap for WPF Applications. 
+This extension allows viewmodels to be injected into the DataContext of a View (FrameworkElement).</description>
+        <summary>InjectionMap is a small extension to InjectionMap for WPF Applications.</summary>
+      <releaseNotes>
+        Refactored: Renamed DataContextResolver toInjectionResolver
+        Added: Xmlnsdefinition - xmlns:wf="http://schemas.wickedflame.ch/2013/xaml/presentation"
+      </releaseNotes>
+        <language />
+        <tags>InjectionMap IoC DI WPF XAML</tags>
+        <dependencies>
+            <group targetFramework=".NETFramework4.5">
+                <dependency id="InjectionMap" version="1.5.4" />
+            </group>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="InjectionMap.Wpf\bin\Release\InjectionMap.Wpf.dll" target="lib\net45\InjectionMap.Wpf.dll" />
+    <file src="InjectionMap.Wpf\bin\Release\InjectionMap.Wpf.xml" target="lib\net45\InjectionMap.Wpf.xml" />
+    </files>
+</package>

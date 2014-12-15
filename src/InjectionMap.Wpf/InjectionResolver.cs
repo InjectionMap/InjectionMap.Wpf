@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Windows;
 
-namespace InjectionMap
+namespace InjectionMap.Wpf
 {
-    [Obsolete("Use InjectionMap.Wpf.InjectionResolver")]
-    public class DataContextResolver
+    public class InjectionResolver
     {
         #region Resolve
 
@@ -14,7 +13,7 @@ namespace InjectionMap
         public static readonly DependencyProperty ResolveProperty = DependencyProperty.RegisterAttached(
             "Resolve",
             typeof(Type),
-            typeof(DataContextResolver),
+            typeof(InjectionResolver),
             new FrameworkPropertyMetadata((Type)null, new PropertyChangedCallback(OnResolveChanged)));
 
         /// <summary>
@@ -46,7 +45,7 @@ namespace InjectionMap
                 throw new InvalidOperationException("Objects can only be injected into the DataContext FrameworkElements");
             }
 
-            using (var resolver = new InjectionResolver())
+            using (var resolver = new InjectionMap.InjectionResolver())
             {
                 element.DataContext = resolver.Resolve(e.NewValue as Type);
             }
