@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
     <metadata>
         <id>InjectionMap.Wpf</id>
-        <version>0.1.3</version>
+        <version>0.1.4-RC1</version>
         <title>InjectionMap.Wpf</title>
         <authors>Christian Walpen</authors>
         <owners>Christian Walpen</owners>
@@ -14,8 +14,11 @@
 This extension allows viewmodels to be injected into the DataContext of a View (FrameworkElement).</description>
         <summary>InjectionMap is a small extension to InjectionMap for WPF Applications.</summary>
       <releaseNotes>
-        Refactored: Renamed DataContextResolver toInjectionResolver
-        Added: Xmlnsdefinition - xmlns:wf="http://schemas.wickedflame.ch/2013/xaml/presentation"
+0.1.4
+- Added: Logging/Tracing
+0.1.3
+- Refactored: Renamed DataContextResolver toInjectionResolver
+- Added: Xmlnsdefinition - xmlns:wf="http://schemas.wickedflame.ch/2013/xaml/presentation"
       </releaseNotes>
         <language />
         <tags>InjectionMap IoC DI WPF XAML</tags>

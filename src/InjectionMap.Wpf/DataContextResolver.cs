@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InjectionMap.Tracing;
+using System;
 using System.Windows;
 
 namespace InjectionMap
@@ -6,6 +7,15 @@ namespace InjectionMap
     [Obsolete("Use InjectionMap.Wpf.InjectionResolver")]
     public class DataContextResolver
     {
+        static LoggerFactory _loggerFactory = new LoggerFactory();
+        static ILogger Logger
+        {
+            get
+            {
+                return _loggerFactory.CreateLogger();
+            }
+        }
+
         #region Resolve
 
         /// <summary>
@@ -43,11 +53,13 @@ namespace InjectionMap
             var element = d as FrameworkElement;
             if (element == null)
             {
+                Logger.Write(string.Format("InjectionMap.Wpf - ViewModel Injection can only be made on DataContext of FrameworkElements. Could not find DataContext on {0}", d.GetType().Name), LogLevel.Error, "InjectionMap.Wpf.InjectionResolver", "InjectionResolver", DateTime.Now);
                 throw new InvalidOperationException("Objects can only be injected into the DataContext FrameworkElements");
             }
 
             using (var resolver = new InjectionResolver())
             {
+                Logger.Write(string.Format("InjectionMap.Wpf - Inject {0} to DataContext of {1}", e.NewValue, d.GetType()), LogLevel.Info, "InjectionMap.Wpf.InjectionResolver", "InjectionResolver", DateTime.Now);
                 element.DataContext = resolver.Resolve(e.NewValue as Type);
             }
         }
